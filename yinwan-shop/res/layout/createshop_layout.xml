@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app_layout_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_common_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/llHeadImg"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.bangqu.yinwan.shop.ui.LoadingCircleView
+                    android:id="@+id/loading"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone" >
+                </com.bangqu.yinwan.shop.ui.LoadingCircleView>
+
+                <ImageView
+                    android:id="@+id/ivShopHead"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/addpro" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="190dp"
+                    android:layout_weight="2"
+                    android:text="店铺照片"
+                    android:textColor="@color/color_grey3"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/right_light" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#ECE9D8" />
+
+            <LinearLayout
+                style="@style/common_single_size"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="2"
+                    android:text="店铺名称" />
+
+                <EditText
+                    android:id="@+id/etShopName"
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入店铺名称" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#ECE9D8" />
+
+            <LinearLayout
+                style="@style/common_single_size"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="2"
+                    android:text="联系人" />
+
+                <EditText
+                    android:id="@+id/etLinkMan"
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入联系人" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#ECE9D8" />
+
+            <LinearLayout
+                style="@style/common_single_size"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="2"
+                    android:text="联系电话" />
+
+                <EditText
+                    android:id="@+id/etShopPhone"
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入联系电话"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#ECE9D8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:text="市"
+                        android:textColor="@color/color_text_black" />
+
+                    <TextView
+                        android:id="@+id/tvcitychange"
+                        android:layout_width="match_parent"
+                        android:layout_height="29dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:hint="请选择店铺所在市"
+                        android:textColor="@color/color_text_black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginLeft="12dip"
+                        android:layout_marginRight="10dip"
+                        android:background="#ECE9D8" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:text="区县"
+                        android:textColor="@color/color_text_black" />
+
+                    <TextView
+                        android:id="@+id/tvdistrict"
+                        android:layout_width="match_parent"
+                        android:layout_height="29dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:hint="请选择店铺所在区县"
+                        android:textColor="@color/color_text_black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginLeft="12dip"
+                        android:layout_marginRight="6dip"
+                        android:background="#ECE9D8" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/common_single_size"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="2"
+                    android:text="地址" />
+
+                <EditText
+                    android:id="@+id/etShopAddress"
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入地址" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="12dip"
+                android:layout_marginRight="12dip"
+                android:background="#ECE9D8" />
+
+            <LinearLayout
+                android:id="@+id/llDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tvDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shopdetail_editbg"
+                    android:gravity="center"
+                    android:hint="请定位获取精确地址"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#ECE9D8" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="时间"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#ECE9D8" />
+
+            <LinearLayout
+                style="@style/common_single_size"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="2"
+                    android:text="营业日期" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/etStartDate"
+                        style="@style/common_text_size"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:editable="false"
+                        android:gravity="center"
+                        android:text="星期一"
+                        android:textColor="@color/color_text_black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="至"
+                        android:textColor="@color/color_text_black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/etEndDate"
+                        style="@style/common_text_size"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:background="@null"
+                        android:editable="false"
+                        android:gravity="center"
+                        android:text="星期日"
+                        android:textColor="@color/color_text_black" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#ECE9D8" />
+
+            <LinearLayout
+                style="@style/common_single_size"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="2"
+                    android:text="营业时间" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/etStartTime"
+                        style="@style/common_text_size"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:editable="false"
+                        android:gravity="center"
+                        android:text="09:00" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="至"
+                        android:textColor="@color/color_text_black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/etEndTime"
+                        style="@style/common_text_size"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:background="@null"
+                        android:editable="false"
+                        android:gravity="center"
+                        android:text="22:00" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#ECE9D8" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="支付"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#ECE9D8" />
+
+            <LinearLayout
+                style="@style/common_single_size"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="2"
+                    android:text="支付方式" />
+
+                <TextView
+                    android:id="@+id/tvpayment"
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请选择支付方式" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#ECE9D8" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="配送"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#ECE9D8" />
+
+            <LinearLayout
+                style="@style/common_single_size"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tvsong"
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="2"
+                    android:text="是否送货" />
+
+                <RadioGroup
+                    android:id="@+id/rgISSendcreate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rbSendcreat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="是"
+                        android:textSize="20dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbSendcreat2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="否"
+                        android:textSize="20dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vi1"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#ECE9D8" />
+
+            <LinearLayout
+                android:id="@+id/llcompanyDelivery"
+                style="@style/common_single_size"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="2"
+                    android:text="是否支持物业送货" />
+
+                <RadioGroup
+                    android:id="@+id/rgISSendwuye"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rbSendwuye1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="是"
+                        android:textSize="20dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbSendwuye2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="否"
+                        android:textSize="20dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vi2"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#ECE9D8" />
+
+            <LinearLayout
+                android:id="@+id/llsongmoney"
+                style="@style/common_single_size"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="2"
+                    android:text="起送金额" />
+
+                <EditText
+                    android:id="@+id/etSendPrice"
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:text="20" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#ECE9D8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1" >
+
+                <EditText
+                    android:id="@+id/etdescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="配送说明:如遇到订单不满足金额，或特殊天气可能不配送获取，请原谅"
+                    android:minHeight="80dp"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/color_text_black" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#ECE9D8" />
+
+            <LinearLayout
+                style="@style/common_single_size"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="2"
+                    android:text="店铺简介" />
+
+                <TextView
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="78dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#ECE9D8" />
+
+            <LinearLayout
+                style="@style/common_single_size"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/etShopContent"
+                    style="@style/common_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请介绍一下您的店铺" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="您提交的店铺基本信息，我们将会在48小时内审核。"
+                android:textColor="@color/color_grey"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/btnCreateShop"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_product_num_ok_selector"
+                    android:text="提交店铺信息"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

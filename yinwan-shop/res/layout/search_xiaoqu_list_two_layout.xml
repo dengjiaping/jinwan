@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <include
+        layout="@layout/include_common_title"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/search_bg_top_background"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_bg_top_background"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dip"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="28dip"
+                    android:layout_height="28dip"
+                    android:layout_gravity="center|left"
+                    android:background="@drawable/search_bg_xiapqu_left" />
+
+                <EditText
+                    android:id="@+id/etSearchtwo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入小区名称"
+                    android:singleLine="true"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_white"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnDeleteSearch"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center|right"
+                    android:layout_marginRight="8dip"
+                    android:background="@drawable/search_btn_delete_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="18dp"
+                android:background="@color/color_white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llgocity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btncity"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:text="城市"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/up" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/include_progressbar_appbg" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/color_app_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="附近小区"
+        android:textColor="@color/color_grey2"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_grey" />
+
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="暂无小区"
+        android:textColor="@color/color_grey2"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lvSearchTwo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/color_app_bg"
+        android:dividerHeight="0.5dp"
+        android:overScrollMode="never"
+        android:visibility="gone" >
+    </ListView>
+
+    <com.bangqu.yinwan.shop.widget.XListView
+        android:id="@+id/XlvLocation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/color_app_bg"
+        android:dividerHeight="0.5dp" />
+
+</LinearLayout>

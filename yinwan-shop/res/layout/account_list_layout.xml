@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_common_title" />
+
+    <include layout="@layout/include_progressbar_appbg" />
+
+    <com.bangqu.yinwan.shop.widget.XListView
+        android:id="@+id/XlvAccountList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/color_app_bg"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/tvnoaccount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="暂无数据"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</LinearLayout>

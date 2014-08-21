@@ -1,0 +1,36 @@
+<resources>
+
+    <color name="color_black">#000000</color>
+    <color name="color_grey">#CDCBCA</color>
+    <color name="color_grey2">#87888C</color>
+    <color name="color_grey3">#999999</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_red">#FF0000</color>
+    <color name="color_red_two">#dc2524</color>
+    <color name="color_home_normal">#AFAFAF</color>
+    <color name="color_home_pressed">#5EB3F4</color>
+    <color name="color_item_pressed">#FD7744</color>
+    <color name="color_app_bg">#F1F1F1</color>
+    <color name="color_app_layout_bg">#fafafa</color>
+    <color name="light_gray">#ffe6e6e6</color>
+    <color name="color_line">#D9D9D9</color>
+    <!-- 透明 -->
+    <color name="color_bg">#00000000</color>
+    <color name="color_bg_ed">#e0000000</color>
+    <color name="color_text_black">#3f3f3f</color>
+
+    <!-- 暗绿色 -->
+    <color name="blue">#0000ff</color>
+    <color name="red">#B01E1D</color>
+    <color name="green">#25AE5F</color>
+    <!-- 扫描 -->
+    <color name="viewfinder_framesm">#ff88ae00</color>
+    <color name="viewfinder_frame">#53A728</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_text">#ffffff</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="transparent">#00000000</color>
+
+</resources>

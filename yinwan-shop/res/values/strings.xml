@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">银湾商户版</string>
+    <string name="action_settings">Settings</string>
+    <string name="regist"><u>忘记密码？</u></string>
+    <string name="spinner_tip">请选择商品单价</string>
+    <string name="loading">xuan xuan go go go </string>
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unknown">发送返回</string>
+    <string name="getlocation_error">定位获取失败，请重新定位</string>
+    <string name="getlocation_error_other">位置获取失败，请重试！</string>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+</resources>

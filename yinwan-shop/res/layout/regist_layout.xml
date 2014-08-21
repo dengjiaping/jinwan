@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llregist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_common_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            style="@style/common_single_size"
+            android:layout_width="match_parent"
+            android:background="@drawable/common_bg_single_with_top_normal" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="2"
+                android:text="用户名"
+                android:textColor="@color/color_black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etUserName"
+                style="@style/common_single_size"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:inputType="number"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/color_grey" />
+
+        <LinearLayout
+            style="@style/common_single_size"
+            android:background="@drawable/common_bg_single_with_middle"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="2"
+                android:text="昵称"
+                android:textColor="@color/color_black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etUNnicheng"
+                style="@style/common_single_size"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入昵称"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/color_grey" />
+
+        <LinearLayout
+            style="@style/common_single_size"
+            android:background="@drawable/common_bg_single_with_middle"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="2"
+                android:text="密码"
+                android:textColor="@color/color_black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                style="@style/common_single_size"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/color_grey" />
+
+        <LinearLayout
+            style="@style/common_single_size"
+            android:background="@drawable/common_bg_single_with_bottom"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="2"
+                android:text="确认密码"
+                android:textColor="@color/color_black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etPassword2"
+                style="@style/common_single_size"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请再次输入密码"
+                android:inputType="textPassword"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRegist"
+            android:layout_width="match_parent"
+            android:layout_height="38dip"
+            android:layout_marginTop="30dip"
+            android:background="@drawable/edit_product_num_ok_selector"
+            android:text="注册"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="right"
+                android:text="我已阅读并同意"
+                android:textColor="@color/color_grey2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvDeal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="《银湾社区生活网服务协议》"
+                android:textColor="#DC2524"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

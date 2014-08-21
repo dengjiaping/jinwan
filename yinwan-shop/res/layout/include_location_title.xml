@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llTempCityHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_app_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/llNoEdit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/llgps"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/color_app_bg"
+            android:gravity="center|left" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="定位城市"
+                android:textColor="@color/color_grey2"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llGPSCity"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <Button
+                android:id="@+id/btnGPSCity"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/home_start_btn_product"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="正在定位..."
+                android:textColor="@color/color_red"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/color_app_bg"
+                android:gravity="center|left" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="热门城市"
+                    android:textColor="@color/color_grey2"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTempHotCity"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="@color/color_app_bg"
+                android:gravity="center|left"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvHotCity1"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/home_start_btn_product"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="正在加载"
+                    android:textColor="@color/color_black"
+                    android:textSize="22sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#F3F3F3" />
+
+                <TextView
+                    android:id="@+id/tvHotCity2"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/home_start_btn_product"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="正在加载"
+                    android:textColor="@color/color_black"
+                    android:textSize="22sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#F3F3F3" />
+
+                <TextView
+                    android:id="@+id/tvHotCity3"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/home_start_btn_product"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="正在加载"
+                    android:textColor="@color/color_black"
+                    android:textSize="22sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#F3F3F3" />
+
+                <TextView
+                    android:id="@+id/tvHotCity4"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/home_start_btn_product"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="正在加载"
+                    android:textColor="@color/color_black"
+                    android:textSize="22sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#F3F3F3" />
+
+                <TextView
+                    android:id="@+id/tvHotCity5"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/home_start_btn_product"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="正在加载"
+                    android:textColor="@color/color_black"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_app_bg"
+                android:gravity="center|left" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="全部城市"
+                    android:textColor="@color/color_grey2"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <com.bangqu.yinwan.shop.widget.ListViewForScrollView
+                android:id="@+id/lvSvCityList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:divider="@color/color_app_bg"
+                android:dividerHeight="0.5dp" >
+            </com.bangqu.yinwan.shop.widget.ListViewForScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

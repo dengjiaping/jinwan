@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_common_title" />
+
+    <include layout="@layout/include_progressbar_appbg" />
+
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="暂无商品/服务"
+        android:textColor="@color/color_grey2"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginLeft="6dip"
+        android:layout_marginRight="6dip"
+        android:background="#ECE9D8" />
+
+    <com.bangqu.yinwan.shop.widget.XListView
+        android:id="@+id/XlvProductList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/color_app_bg"
+        android:dividerHeight="0.5dp" />
+
+</LinearLayout>
