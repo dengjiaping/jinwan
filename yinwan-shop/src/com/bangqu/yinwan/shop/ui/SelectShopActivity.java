@@ -466,13 +466,15 @@ public class SelectShopActivity extends UIBaseActivity implements
 
 		Toast.makeText(SelectShopActivity.this, "店铺切换成功！", Toast.LENGTH_SHORT)
 				.show();
-		if (SharedPrefUtil.isFistSearch(SelectShopActivity.this)) {
+		/*if (SharedPrefUtil.isFistSearch(SelectShopActivity.this)) {
 			startActivity(new Intent(SelectShopActivity.this,
 					SearchXiaoQuActivity.class));
 			finish();
 		} else {
 			finish();
-		}
+		}*/
+		//第一次登陆选择店铺后直接跳到首页
+		finish();
 	}
 
 }

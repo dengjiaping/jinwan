@@ -124,8 +124,8 @@ public class LocationThrActivity extends UIBaseActivity implements
 			viewHolder.tvLocationName.setText(locationBean.getName());
 			viewHolder.tvdistrict.setText(locationBean.getDistrict().getName());
 			viewHolder.tvendtime.setText(locationBean.getAddTime());
-			viewHolder.btnApplyJoin.setText("已驳回");
-			/*viewHolder.btnApplyJoin.setOnClickListener(new OnClickListener() {
+			viewHolder.btnApplyJoin.setText("申请加入");
+			viewHolder.btnApplyJoin.setOnClickListener(new OnClickListener() {
 
 				@Override
 				public void onClick(View v) {
@@ -140,7 +140,9 @@ public class LocationThrActivity extends UIBaseActivity implements
 							SearchXiaoQuOneList.get(position).getId())
 							.execute();
 				}
-			});*/
+				
+				
+			});
 			return convertView;
 		}
 	}

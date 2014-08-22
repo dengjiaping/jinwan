@@ -150,12 +150,18 @@ public class HomeFenLeiActivity extends UIBaseActivity implements
 		super.fillData();
 		etCatagory1.setText(SumCategory);
 		switch (categoryList.size()) {
+		//case 0:
+			
+		//	break;
+		
 		case 1:
 			strfenleione = categoryList.get(0).getId() + ",";
 			break;
 		case 2:
 			strfenleione = categoryList.get(0).getId() + ",";
-			strfenleitwo = categoryList.get(1).getName() + ",";
+			//strfenleitwo = categoryList.get(1).getName() + ",";
+			strfenleitwo = categoryList.get(1).getId() + ",";
+			
 			break;
 		case 3:
 			strfenleione = categoryList.get(0).getId() + ",";

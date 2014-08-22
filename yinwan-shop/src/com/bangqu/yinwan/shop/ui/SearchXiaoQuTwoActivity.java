@@ -33,6 +33,7 @@ import com.bangqu.yinwan.shop.base.UIBaseActivity;
 import com.bangqu.yinwan.shop.bean.LocationBean;
 import com.bangqu.yinwan.shop.helper.LocationHelper;
 import com.bangqu.yinwan.shop.internet.SystemException;
+import com.bangqu.yinwan.shop.ui.LocationThrActivity.LoadApplyJoinTask;
 import com.bangqu.yinwan.shop.util.SharedPrefUtil;
 import com.bangqu.yinwan.shop.util.StringUtil;
 import com.bangqu.yinwan.shop.widget.XListView;
@@ -291,15 +292,30 @@ public class SearchXiaoQuTwoActivity extends UIBaseActivity implements
 								});
 					}
 					if (locationBean.getDistribution().getState().equals("-2")) {
-						viewHolder.btnApplyJoin.setText("已驳回");
+						viewHolder.btnApplyJoin.setText("申请加入");
+						viewHolder.btnApplyJoin.setTag(position);
 						viewHolder.btnApplyJoin
 						.setOnClickListener(new OnClickListener() {
 							@Override
 							public void onClick(View v) {
-								Toast.makeText(
-										SearchXiaoQuTwoActivity.this,
-										"已驳回不能再申请", Toast.LENGTH_SHORT)
-										.show();
+//								Toast.makeText(
+//										SearchXiaoQuTwoActivity.this,
+//										"已驳回不能再申请", Toast.LENGTH_SHORT)
+//										.show();
+								
+								SharedPrefUtil
+								.setFistSearch(SearchXiaoQuTwoActivity.this);
+						final int index = (Integer) v.getTag();
+						new LoadApplyJoinTask(
+								SharedPrefUtil
+										.getToken(SearchXiaoQuTwoActivity.this),
+								SharedPrefUtil.getShopBean(
+										SearchXiaoQuTwoActivity.this)
+										.getId(), locationList.get(
+										index).getId()).execute();
+						
+						
+						
 							}
 						});
 					}
@@ -325,7 +341,8 @@ public class SearchXiaoQuTwoActivity extends UIBaseActivity implements
 												SearchXiaoQuTwoActivity.this)
 												.getId(), locationList.get(
 												index).getId()).execute();
-
+								
+								
 							}
 						});
 			}
@@ -616,7 +633,7 @@ public class SearchXiaoQuTwoActivity extends UIBaseActivity implements
 									}
 								});
 					}
-					if (locationBean.getDistribution().getState().equals("-2")) {
+					/*if (locationBean.getDistribution().getState().equals("-2")) {
 						viewHolder.btnApplyJoin.setText("已驳回");
 						viewHolder.btnApplyJoin
 						.setOnClickListener(new OnClickListener() {
@@ -628,7 +645,7 @@ public class SearchXiaoQuTwoActivity extends UIBaseActivity implements
 										.show();
 							}
 						});
-					}
+					}*/
 
 				}
 			} else {
